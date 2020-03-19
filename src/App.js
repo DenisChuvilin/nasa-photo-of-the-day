@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from "axios";
 import styled from "styled-components"; 
-import Title from './components/Title';
+import Home from './components/Home';
 
   //styled components
   const StyledApp = styled.div `
@@ -14,9 +14,7 @@ import Title from './components/Title';
 display:flex; 
 flex-direction:column;
 justify-content:center;
-align-content:center;
   `
-
 function App() {
   // set apod data
   const [apod, setApod] = useState();
@@ -38,7 +36,7 @@ function App() {
 
   return (
     <StyledApp className="App" apod = {apod}>
-      <Title apod = {apod} />
+      <Home apod = {apod} />
     </StyledApp>
   )
 }
